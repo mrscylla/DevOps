@@ -1,0 +1,8 @@
+M	Config/Configuration.xml
+M	Config/DataProcessors/ПечатьЭтикетокТМЦВЭксплуатации/Forms/РТ_ФормаТМЦВЭксплуатации/Ext/Form/Module.bsl
+M	Config/DataProcessors/РТ_ПечатьЭтикетокОсновныеСредства/Forms/РТ_ФормаОбъектыЭксплуатации/Ext/Form/Module.bsl
+M	Config/Reports/РегламентированныйОтчетСтатистикаФорма1П/Forms/ФормаОтчета2016Кв1/Ext/Form/Module.bsl
+M	Config/Reports/РегламентированныйОтчетСтатистикаФормаП4НЗ/Forms/ФормаОтчета2015Кв1/Ext/Form/Module.bsl
+A	Config/Roles/РТ_ПросмотрИспользованиеРасшифровкаСтатистики.xml
+A	Config/Roles/РТ_ПросмотрИспользованиеРасшифровкаСтатистики/Ext/Rights.xml
+R098	Deploy/2.2.2.199/1Cv8.cf	Deploy/1cv8.cf
