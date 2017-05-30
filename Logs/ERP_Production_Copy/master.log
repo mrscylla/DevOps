@@ -50,3 +50,28 @@
 28.05.2017 20:05:00: ИНФОРМАЦИЯ - Синтаксический контроль в базе ERP_Production_Copy завершен успешно!
 28.05.2017 20:05:00: ИНФОРМАЦИЯ - Начало подготовки файла выгрузки конфигурации
 28.05.2017 20:08:41: ИНФОРМАЦИЯ - выгрузка конфигурации из базы ERP_Production_Copy завершена
+29.05.2017 23:33:54: ИНФОРМАЦИЯ - формирую список последних файлов в D:\Марочкин\GIT\devops\ERP_Production_Copy\master_lastfiles.txt
+29.05.2017 23:33:54: ИНФОРМАЦИЯ - переход на ветку  master в репозитории D:\Марочкин\GIT\ERP
+29.05.2017 23:33:57: ИНФОРМАЦИЯ - получение списка из D:\Марочкин\GIT\ERP
+29.05.2017 23:33:58: ИНФОРМАЦИЯ - Начало частичной загрузки конфигурации из файлов.
+29.05.2017 23:33:58: ИНФОРМАЦИЯ - Запуск: "C:\Program Files\1cv8\8.3.10.2252\bin\1cv8.exe" DESIGNER /UC 456654 /IBName "ERP_Production_Copy" /N "Марочкин Алексей" /P "******" /LoadConfigFromFiles D:\Марочкин\GIT\ERP\Config -ListFile D:\Марочкин\GIT\devops\ERP_Production_Copy\master_lastfiles.txt /UpdateDBCfg /out D:\Марочкин\GIT\devops\Logs\ERP_Production_Copy\loadchanges_ERP_Production_Copy.log
+29.05.2017 23:34:09: ИНФОРМАЦИЯ - обновление базы ERP_Production_Copy завершено
+29.05.2017 23:34:09: ОШИБКА - загрузка изменений в базу "ERP_Production_Copy" не удалась, см. D:\Марочкин\GIT\devops\Logs\ERP_Production_Copy\LoadChanges_ERP_Production_Copy.log
+29.05.2017 23:52:39: ИНФОРМАЦИЯ - формирую список последних файлов в D:\Марочкин\GIT\devops\ERP_Production_Copy\master_lastfiles.txt
+29.05.2017 23:52:39: ИНФОРМАЦИЯ - переход на ветку  master в репозитории D:\Марочкин\GIT\ERP
+29.05.2017 23:52:42: ИНФОРМАЦИЯ - получение списка из D:\Марочкин\GIT\ERP
+29.05.2017 23:52:42: ИНФОРМАЦИЯ - Начало частичной загрузки конфигурации из файлов.
+29.05.2017 23:52:42: ИНФОРМАЦИЯ - Запуск: "C:\Program Files\1cv8\8.3.10.2252\bin\1cv8.exe" DESIGNER /UC 456654 /IBName "ERP_Production_Copy" /N "Марочкин Алексей" /P "******" /LoadConfigFromFiles D:\Марочкин\GIT\ERP\Config -ListFile D:\Марочкин\GIT\devops\ERP_Production_Copy\master_lastfiles.txt /UpdateDBCfg /out D:\Марочкин\GIT\devops\Logs\ERP_Production_Copy\loadchanges_ERP_Production_Copy.log
+29.05.2017 23:52:50: ИНФОРМАЦИЯ - обновление базы ERP_Production_Copy завершено
+29.05.2017 23:52:50: ОШИБКА - загрузка изменений в базу "ERP_Production_Copy" не удалась, см. D:\Марочкин\GIT\devops\Logs\ERP_Production_Copy\LoadChanges_ERP_Production_Copy.log
+29.05.2017 23:57:25: ИНФОРМАЦИЯ - формирую список последних файлов в D:\Марочкин\GIT\devops\ERP_Production_Copy\master_lastfiles.txt
+29.05.2017 23:57:25: ИНФОРМАЦИЯ - переход на ветку  master в репозитории D:\Марочкин\GIT\ERP
+29.05.2017 23:57:28: ИНФОРМАЦИЯ - получение списка из D:\Марочкин\GIT\ERP
+29.05.2017 23:57:28: ИНФОРМАЦИЯ - Начало частичной загрузки конфигурации из файлов.
+29.05.2017 23:57:28: ИНФОРМАЦИЯ - Запуск: "C:\Program Files\1cv8\8.3.10.2252\bin\1cv8.exe" DESIGNER /UC 456654 /IBName "ERP_Production_Copy" /N "Марочкин Алексей" /P "******" /LoadConfigFromFiles D:\Марочкин\GIT\ERP\Config -ListFile D:\Марочкин\GIT\devops\ERP_Production_Copy\master_lastfiles.txt /UpdateDBCfg /out D:\Марочкин\GIT\devops\Logs\ERP_Production_Copy\loadchanges_ERP_Production_Copy.log
+30.05.2017 0:09:13: ИНФОРМАЦИЯ - обновление базы ERP_Production_Copy завершено
+30.05.2017 0:09:13: ИНФОРМАЦИЯ - Проведение синтаксического контроля модулей
+30.05.2017 0:28:10: ИНФОРМАЦИЯ - Синтаксический контроль в базе ERP_Production_Copy завершен успешно!
+30.05.2017 0:28:10: ИНФОРМАЦИЯ - Начало подготовки файла выгрузки конфигурации
+30.05.2017 0:31:50: ИНФОРМАЦИЯ - выгрузка конфигурации из базы ERP_Production_Copy завершена
+30.05.2017 0:31:50: ИНФОРМАЦИЯ - Создан семафор необходимости обновления рабочей базы.

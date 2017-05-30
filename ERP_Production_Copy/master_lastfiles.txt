@@ -1,9 +1,12 @@
-M	Config/Configuration.xml
-M	Config/DataProcessors/ПечатьЭтикетокТМЦВЭксплуатации/Forms/РТ_ФормаТМЦВЭксплуатации/Ext/Form/Module.bsl
-M	Config/DataProcessors/РТ_ПечатьЭтикетокОсновныеСредства/Forms/РТ_ФормаОбъектыЭксплуатации/Ext/Form/Module.bsl
-M	Config/Reports/РегламентированныйОтчетСтатистикаФорма1П/Forms/ФормаОтчета2016Кв1/Ext/Form/Module.bsl
-M	Config/Reports/РегламентированныйОтчетСтатистикаФормаП4НЗ/Forms/ФормаОтчета2015Кв1/Ext/Form/Module.bsl
-A	Config/Roles/РТ_ПросмотрИспользованиеРасшифровкаСтатистики.xml
-A	Config/Roles/РТ_ПросмотрИспользованиеРасшифровкаСтатистики/Ext/Rights.xml
-D	Deploy/2.2.2.199/1Cv8.cf
-A	Deploy/ERP_Production_Copy.cf
+﻿D:\Марочкин\GIT\ERP\Config\AccountingRegisters\РТ_ХозрасчетныйУУ.xml
+D:\Марочкин\GIT\ERP\Config\CommonForms\СтруктураПодчиненности.xml
+D:\Марочкин\GIT\ERP\Config\DefinedTypes\РТ_ОбъектыУчетаУУ.xml
+D:\Марочкин\GIT\ERP\Config\Documents\СписаниеНДСНаРасходы.xml
+D:\Марочкин\GIT\ERP\Config\Catalogs\ОбъектыЭксплуатации\Ext\ManagerModule.bsl
+D:\Марочкин\GIT\ERP\Config\CommonModules\МодификацияКонфигурацииПереопределяемый\Ext\Module.bsl
+D:\Марочкин\GIT\ERP\Config\CommonModules\РТ_ОбщийМодуль\Ext\Module.bsl
+D:\Марочкин\GIT\ERP\Config\CommonModules\РТ_ТрансляцияПроводокУпрУчетКлиентСервер\Ext\Module.bsl
+D:\Марочкин\GIT\ERP\Config\DataProcessors\РТ_ПомощникДляЗРДС\Forms\Форма.xml
+D:\Марочкин\GIT\ERP\Config\Documents\ВнутреннееПотреблениеТоваров\Forms\ФормаДокумента.xml
+D:\Марочкин\GIT\ERP\Config\Documents\РТ_ЛимитыРасходаДенежныхСредств\Forms\ФормаДокумента.xml
+D:\Марочкин\GIT\ERP\Config\Reports\РегламентированныйОтчетСтатистикаФормаП2\Templates\АтрибВыгрузкиXML2017Кв1.xml
