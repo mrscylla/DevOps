@@ -1,0 +1,9 @@
+﻿D:\Марочкин\GIT\ERP\Config\Documents\РаспределениеРасходовБудущихПериодов.xml
+D:\Марочкин\GIT\ERP\Config\CommonModules\МодификацияКонфигурацииПереопределяемый\Ext\Module.bsl
+D:\Марочкин\GIT\ERP\Config\Documents\ОтпускБезСохраненияОплаты\Forms\ФормаДокумента.xml
+D:\Марочкин\GIT\ERP\Config\Documents\РаспределениеРасходовБудущихПериодов\Ext\ObjectModule.bsl
+D:\Марочкин\GIT\ERP\Config\Documents\РаспределениеРасходовБудущихПериодов\Forms\ФормаДокумента.xml
+D:\Марочкин\GIT\ERP\Config\Documents\РаспределениеРасходовБудущихПериодов\Forms\ФормаСпискаДокументов.xml
+D:\Марочкин\GIT\ERP\Config\Documents\РТ_ОперацияУпрУчет\Forms\ФормаДокумента.xml
+D:\Марочкин\GIT\ERP\Config\Reports\КнигаПокупок\Ext\ManagerModule.bsl
+D:\Марочкин\GIT\ERP\Config\Reports\КнигаПродаж\Ext\ManagerModule.bsl
