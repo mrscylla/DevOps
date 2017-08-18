@@ -1,4 +1,8 @@
---:setvar db ERP_Development_Dobrinin
+:setvar db ERP_Production_Copy
+USE $(db)
+ALTER DATABASE $(db) SET RECOVERY SIMPLE
+GO
+
 
 USE Master
 GO
