@@ -1,5 +1,6 @@
---:setvar db ERP_DAI
---:setvar bakfile 'D:\DBBACKUP\ERP_Production_Copy.bak'
+--:setvar sourcedb ERP_Production
+--:setvar db ERP_MAV
+--:setvar bakfile D:\DBBACKUP\ERP_Production_Copy.bak
 
 USE Master
 GO
@@ -17,13 +18,13 @@ End
 GO
 
 RESTORE DATABASE $(db) FROM DISK = '$(bakfile)' WITH REPLACE, FILE = 1, RECOVERY,
-MOVE N'ERP_Production' TO 'D:\DBDATA\$(db).mdf',
-MOVE N'ERP_Production_log' TO 'D:\DBDATA\$(db)_log.ldf'
+MOVE N'$(sourcedb)' TO 'D:\DBDATA\$(db).mdf',
+MOVE N'$(sourcedb)_log' TO 'D:\DBDATA\$(db)_log.ldf'
 GO
 
 USE $(db)
 ALTER DATABASE $(db) SET RECOVERY SIMPLE
 GO
 
-DBCC SHRINKFILE (ERP_Production_log, 0);
+DBCC SHRINKFILE ('$(sourcedb)_log', 0);
 GO
