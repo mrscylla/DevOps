@@ -1,0 +1,1 @@
+Invoke-WebRequest -Uri http://1c-tasks.rtits.ru/check_mails?key=8c4Yl8xwYPzcDtY3QgaU

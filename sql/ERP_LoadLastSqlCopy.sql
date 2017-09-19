@@ -1,4 +1,4 @@
-:setvar db ERP_Production_Copy
+--:setvar db ERP_Production_Copy
 USE $(db)
 ALTER DATABASE $(db) SET RECOVERY SIMPLE
 GO
