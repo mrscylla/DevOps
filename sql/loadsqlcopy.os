@@ -10,6 +10,7 @@
 	СтруктураАдресов.Вставить("ECM_MMY", Новый Структура("Email, Telegram","Mikhail.Madekin@rtits.ru",""));
 	
 	СтруктураАдресов.Вставить("ERP_BAS", Новый Структура("Email, Telegram","Aleksandr.Bogatov@rtits.ru","-1001124057695"));
+	СтруктураАдресов.Вставить("ERP_BAS2", Новый Структура("Email, Telegram","Aleksandr.Bogatov@rtits.ru","-1001124057695"));
 	
 	СтруктураАдресов.Вставить("ERP_DAI", Новый Структура("Email, Telegram","Andrey.Dobrynin@rtits.ru",""));
 	СтруктураАдресов.Вставить("ECM_DAI", Новый Структура("Email, Telegram","Andrey.Dobrynin@rtits.ru",""));
@@ -19,12 +20,16 @@
 	СтруктураАдресов.Вставить("ERP_KAN", Новый Структура("Email, Telegram","Aleksey.Klimashenko@rtits.ru","-1001139532612"));
 	СтруктураАдресов.Вставить("ERP_KSP", Новый Структура("Email, Telegram","Sergey.Kiselev@rtits.ru",""));
 	СтруктураАдресов.Вставить("ERP_MSS", Новый Структура("Email, Telegram","Sergey.Menzhesarov@rtits.ru","-1001107290583"));
+	
 	СтруктураАдресов.Вставить("ERP_KDS", Новый Структура("Email, Telegram","Dmitriy.Klimashin@rtits.ru","-1001075061753"));
+	СтруктураАдресов.Вставить("ECM_KDS", Новый Структура("Email, Telegram","Dmitriy.Klimashin@rtits.ru","-1001075061753"));
+	
 	СтруктураАдресов.Вставить("ERP_MVV", Новый Структура("Email, Telegram","Viktoriya.Malysheva@rtits.ru","-1001147344720"));
 
 	//СтруктураАдресов.Вставить("ERP_TEST1", Новый Структура("Email, Telegram","Olga.Stogova@rtits.ru",""));
 	СтруктураАдресов.Вставить("ERP_TEST1", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
 	СтруктураАдресов.Вставить("ERP_TEST2", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
+	СтруктураАдресов.Вставить("ERP_TEST3", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
 	//СтруктураАдресов.Вставить("ERP_TEST1", Новый Структура("Email, Telegram","Sergey.Kiselev@rtits.ru",""));
 	
 	ТекстСообщения = "";
@@ -47,10 +52,10 @@
 	
 	Если ЗначениеЗаполнено(СтруктураАдресов[НазваниеБазы].Telegram) Тогда
 		
-		//Зап = Новый HTTPЗапрос("/bot373923831:AAGqI4Fu4UogxTVaxaq7rb_dNE4BWorbjZs/sendMessage?chat_id=" + СтруктураАдресов[НазваниеБазы].Telegram + "&text=" + ТекстСообщения);
+		Зап = Новый HTTPЗапрос("/bot373923831:AAGqI4Fu4UogxTVaxaq7rb_dNE4BWorbjZs/sendMessage?chat_id=" + СтруктураАдресов[НазваниеБазы].Telegram + "&text=" + ТекстСообщения);
 		
-		//Соед = Новый HTTPСоединение("api.telegram.org");
-		//Соед.Получить(Зап);
+		Соед = Новый HTTPСоединение("api.telegram.org");
+		Соед.Получить(Зап);
 		
 	КонецЕсли;	
 
