@@ -18,6 +18,8 @@
 	СтруктураАдресов.Вставить("ERP_SOV", Новый Структура("Email, Telegram","Olga.Stogova@rtits.ru",""));
 
 	СтруктураАдресов.Вставить("ERP_KAN", Новый Структура("Email, Telegram","Aleksey.Klimashenko@rtits.ru","-1001139532612"));
+	СтруктураАдресов.Вставить("ECM_KAN", Новый Структура("Email, Telegram","Aleksey.Klimashenko@rtits.ru","-1001139532612"));
+	
 	СтруктураАдресов.Вставить("ERP_KSP", Новый Структура("Email, Telegram","Sergey.Kiselev@rtits.ru",""));
 	СтруктураАдресов.Вставить("ERP_MSS", Новый Структура("Email, Telegram","Sergey.Menzhesarov@rtits.ru","-1001107290583"));
 	
