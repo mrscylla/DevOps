@@ -100,7 +100,7 @@
 
 Оповестить("Начало", НазваниеБазы);
 
-ПроцессSqlCMD = СоздатьПроцесс("""C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\SQLCMD.EXE"" -S RTITS-1C-04 -v sourcedb=""" + БазаИсточник + """ db=""" + НазваниеБазы + """ bakfile=""D:\DBBACKUP\" + БазаИсточник + "_Copy.bak"" -i D:\Users\Marochkin\GIT\devops\sql\LoadBackupFileToDB.sql -o " + РабочийКаталог + "\Logs\sql.log"
+ПроцессSqlCMD = СоздатьПроцесс("""C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\SQLCMD.EXE"" -S RTITS-1C-04 -v sourcedb=""" + БазаИсточник + """ db=""" + НазваниеБазы + """ bakfile=""D:\DBBACKUP\" + БазаИсточник + "_Copy.bak"" -i D:\Users\MAV\GIT\devops\sql\LoadBackupFileToDB.sql -o " + РабочийКаталог + "\Logs\sql.log"
 							,РабочийКаталог
 							,Истина
 							,Ложь
