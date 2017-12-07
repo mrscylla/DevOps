@@ -14,6 +14,8 @@
 	СтруктураАдресов.Вставить("ERP_MAV", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
 	СтруктураАдресов.Вставить("ECM_MAV", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
 	
+	СтруктураАдресов.Вставить("ECM_TSS", Новый Структура("Email, Telegram","Svetlana.Timofeeva@rtits.ru",""));
+	
 	СтруктураАдресов.Вставить("ERP_MMY", Новый Структура("Email, Telegram","Mikhail.Madekin@rtits.ru",""));
 	СтруктураАдресов.Вставить("ECM_MMY", Новый Структура("Email, Telegram","Mikhail.Madekin@rtits.ru",""));
 	
@@ -154,6 +156,7 @@
 
 	Журнал.Информация("загрузка разницы между " + ПервыйХеш + " и " + ВторойХеш + " в " + НазваниеБазы);
 
+	Журнал.Информация("Запуск oscript D:\Users\MAV\GIT\DevOps\deploy\load_changes.os -repo " + ПутьКХранилищу + " -branch " + Ветка + " -srvname RTITS-1C-04 -ibname " + НазваниеБазы + " -usr defuser -pwd ****** -fastupdate true -fromHash " + ПервыйХеш + " -toHash " + ВторойХеш + " -loadchanges true -loadextension true -updatecfgdump true -syntaxctrl false -updatedb true -deploycfg false -deployext false -dpath " + РабочийКаталог);
 	ПроцессСкрипта = СоздатьПроцесс("oscript D:\Users\MAV\GIT\DevOps\deploy\load_changes.os -repo " + ПутьКХранилищу + " -branch " + Ветка + " -srvname RTITS-1C-04 -ibname " + НазваниеБазы + " -usr defuser -pwd defuser -fastupdate true -fromHash " + ПервыйХеш + " -toHash " + ВторойХеш + " -loadchanges true -loadextension true -updatecfgdump true -syntaxctrl false -updatedb true -deploycfg false -deployext false -dpath " + РабочийКаталог
 								,РабочийКаталог
 								,Истина
