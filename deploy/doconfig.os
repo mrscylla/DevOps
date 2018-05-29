@@ -37,13 +37,11 @@
 	СтруктураАдресов.Вставить("ERP_KDS", Новый Структура("Email, Telegram","Dmitriy.Klimashin@rtits.ru","-1001075061753"));
 	СтруктураАдресов.Вставить("ECM_KDS", Новый Структура("Email, Telegram","Dmitriy.Klimashin@rtits.ru","-1001075061753"));
 	
-	СтруктураАдресов.Вставить("ERP_MVV", Новый Структура("Email, Telegram","Viktoriya.Malysheva@rtits.ru","-1001147344720"));
+	СтруктураАдресов.Вставить("ERP_MKA", Новый Структура("Email, Telegram","Kseniya.Medvedeva@rtits.ru","-1001216550133"));
 
-	//СтруктураАдресов.Вставить("ERP_TEST1", Новый Структура("Email, Telegram","Olga.Stogova@rtits.ru",""));
 	СтруктураАдресов.Вставить("ERP_TEST1", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
 	СтруктураАдресов.Вставить("ERP_TEST2", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
 	СтруктураАдресов.Вставить("ERP_TEST3", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
-	//СтруктураАдресов.Вставить("ERP_TEST1", Новый Структура("Email, Telegram","Sergey.Kiselev@rtits.ru",""));
 	
 	ТекстСообщения = "";
 	
