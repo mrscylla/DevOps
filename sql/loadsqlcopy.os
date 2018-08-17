@@ -14,6 +14,7 @@
 
 	СтруктураАдресов.Вставить("ERP_AID", Новый Структура("Email, Telegram","Alyena.Dubinskaya@rtits.ru","-1001133466277"));
 	СтруктураАдресов.Вставить("ECM_AID", Новый Структура("Email, Telegram","Alyena.Dubinskaya@rtits.ru","-1001133466277"));
+	СтруктураАдресов.Вставить("ECM_AID2", Новый Структура("Email, Telegram","Alyena.Dubinskaya@rtits.ru","-1001133466277"));
 	
 	СтруктураАдресов.Вставить("ERP_MAV", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
 	СтруктураАдресов.Вставить("ECM_MAV", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
@@ -38,6 +39,7 @@
 	СтруктураАдресов.Вставить("ECM_KSP", Новый Структура("Email, Telegram","Sergey.Kiselev@rtits.ru",""));
 	
 	СтруктураАдресов.Вставить("ERP_MSS", Новый Структура("Email, Telegram","Sergey.Menzhesarov@rtits.ru","-1001107290583"));
+	СтруктураАдресов.Вставить("ECM_MSS", Новый Структура("Email, Telegram","Sergey.Menzhesarov@rtits.ru","-1001107290583"));
 	
 	СтруктураАдресов.Вставить("ERP_KDS", Новый Структура("Email, Telegram","Dmitriy.Klimashin@rtits.ru","-1001075061753"));
 	СтруктураАдресов.Вставить("ECM_KDS", Новый Структура("Email, Telegram","Dmitriy.Klimashin@rtits.ru","-1001075061753"));
