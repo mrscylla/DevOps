@@ -3,7 +3,7 @@ $DriveLetter = 'R'
 try
 {
         $NewVirtualDisk = New-IscsiVirtualDisk -Path "ramdisk:tempdbRAM.vhdx" -Size 16GB -Description 'ramdisk' -ErrorAction Stop
-        Add-IscsiVirtualDiskTargetMapping -TargetName targetRAM1 -DevicePath "ramdisk:tempdbRAM.vhdx" -ErrorAction Stop
+        Add-IscsiVirtualDiskTargetMapping -TargetName targetRAM -DevicePath "ramdisk:tempdbRAM.vhdx" -ErrorAction Stop
 }
 catch {break}
 
