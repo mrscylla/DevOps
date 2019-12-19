@@ -13,7 +13,7 @@ foreach ($file in $files) {
     $ns.AddNamespace("ns", "http://v8.1c.ru/8.3/MDClasses")
     $ns.AddNamespace("v8", "http://v8.1c.ru/8.1/data/core")
 
-    $nodes = $xmldata.SelectNodes(".//ns:Resource/ns:Properties/ns:Name[contains(text(), 'Сумма')]/following-sibling::ns:Type/v8:Type[text()='xs:decimal']/..", $ns)
+    $nodes = $xmldata.SelectNodes(".//ns:Attribute/ns:Properties/ns:Name[contains(text(), 'Сумма')]/following-sibling::ns:Type/v8:Type[text()='xs:decimal']/..", $ns)
 
     foreach ($node in $nodes) {
         
