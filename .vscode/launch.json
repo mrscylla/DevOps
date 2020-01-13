@@ -4,6 +4,7 @@
     // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+               
         {
             "name": "PowerShell Launch Current File",
             "type": "PowerShell",
@@ -19,7 +20,7 @@
             "processId": "current"
         },
         {
-            "name": "Отладка 1Script",
+            "name": "Отладка 1Script без аргументов",
             "type": "oscript",
             "request": "launch",
             "program": "${file}",
@@ -28,6 +29,16 @@
             "runtimeExecutable": "C:\\Program Files (x86)\\OneScript\\bin\\oscript.exe",
             "debugPort": 2801,
             "protocol": "internal"
+        },
+        {
+            "name": "Отладка loadchanges.os ",
+            "type": "oscript",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["-repo", "D:\\Users\\MAV\\GIT\\ERP", "-branch", "master", "-srvname", "RTITS-CIS-01", "-ibname", "ERP_Production_Copy", "-usr", "\"defuser\"", "-pwd", "defuser", "-dpath", "D:\\Repository1C\\Deploy", "-fastupdate", "true", "-fromHash", "a0ccc00ef299cfd40b469b52fd717e891646e91c", "-toHash", "fd845c3ffb1f46ee9fde25781aed9eeb1c98745b", "-loadchanges", "true", "-loadextension", "true", "-updatecfgdump", "true", "-syntaxctrl", "false", "-updatedb", "true", "-deploycfg", "false", "-deployext", "false"],
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "C:\\Program Files (x86)\\OneScript\\bin\\oscript.exe",
+            "runtimeArgs": []
         }
     ]
 }
