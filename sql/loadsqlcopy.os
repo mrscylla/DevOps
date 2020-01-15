@@ -13,14 +13,25 @@
 Процедура Оповестить(ТипОповещения = "Окончание", НазваниеБазы)
 
 	СтруктураАдресов = Новый Структура;
+	
+	СтруктураАдресов.Вставить("ERP_ZAS", Новый Структура("Email, Telegram","Anna.Zheludkova@rtits.ru",""));
+	СтруктураАдресов.Вставить("ECM_ZAS", Новый Структура("Email, Telegram","Anna.Zheludkova@rtits.ru",""));
+
+	СтруктураАдресов.Вставить("ERP_SAR", Новый Структура("Email, Telegram","Alfik.Shakirov@rtits.ru",""));
+	СтруктураАдресов.Вставить("ECM_SAR", Новый Структура("Email, Telegram","Alfik.Shakirov@rtits.ru",""));
 
 	СтруктураАдресов.Вставить("ECM_DJR", Новый Структура("Email, Telegram","Yuliya.Davlyatshina@rtits.ru",""));
 	СтруктураАдресов.Вставить("ERP_DJR", Новый Структура("Email, Telegram","Yuliya.Davlyatshina@rtits.ru",""));
+	
+	СтруктураАдресов.Вставить("ERP_AAZ", Новый Структура("Email, Telegram","Albert.Akhmetzyanov@rtits.ru",""));
 
 	СтруктураАдресов.Вставить("ECM_AID", Новый Структура("Email, Telegram","Alyena.Dubinskaya@rtits.ru","-1001133466277"));
 
 	СтруктураАдресов.Вставить("ECM_KKD", Новый Структура("Email, Telegram","Kristina.Kholopova@rtits.ru",""));
 	
+	СтруктураАдресов.Вставить("ERP_KAV", Новый Структура("Email, Telegram","Andrey.Karpov@rtits.ru",""));
+	СтруктураАдресов.Вставить("ECM_KAV", Новый Структура("Email, Telegram","Andrey.Karpov@rtits.ru",""));
+
 	СтруктураАдресов.Вставить("ERP_MAV", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
 	СтруктураАдресов.Вставить("ECM_MAV", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
 	
@@ -44,9 +55,7 @@
 	
 	СтруктураАдресов.Вставить("ERP_MKA", Новый Структура("Email, Telegram","Kseniya.Medvedeva@rtits.ru","-1001216550133"));
 
-	СтруктураАдресов.Вставить("ERP_TEST1", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
-	СтруктураАдресов.Вставить("ERP_TEST2", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
-	СтруктураАдресов.Вставить("ERP_TEST3", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
+	СтруктураАдресов.Вставить("ERP_TEST", Новый Структура("Email, Telegram","aleksey.marochkin@rtits.ru","-1001094974811"));
 	
 	ТекстСообщения = "";
 	
@@ -121,6 +130,7 @@
 
 ИмяРодительскогоПлана = АргументыКоманднойСтроки[0];
 РабочийКаталог = АргументыКоманднойСтроки[1];
+//ЦелевойСервер = АргументыКоманднойСтроки[2];
 
 МассивСтрок = СтрРазделить(ИмяРодительскогоПлана, "-");
 МассивСтрок.Удалить(МассивСтрок.Количество() - 1);
@@ -130,6 +140,17 @@
 
 БазаИсточник = МассивСтрок[0] + "_Production";
 НазваниеБазы = СтрСоединить(МассивСтрок,"_");
+
+Если СтрНайти(НазваниеБазы, "0")>0 Тогда
+	ЦелевойСервер = Сред(НазваниеБазы, СтрНайти(НазваниеБазы, "0"));
+Иначе
+	ЦелевойСервер = "04";
+КонецЕсли;
+
+НазваниеБазы = Сред(НазваниеБазы, 1, СтрНайти(НазваниеБазы, "0") - 1);
+
+
+
 
 ПапкаХранилища = Новый Файл(ПутьКХранилищу);
 
@@ -154,7 +175,8 @@
 
 Журнал.Информация("запуск загрузки копии из SQL для " + БазаИсточник + " в " + НазваниеБазы);
 
-ПроцессSqlCMD = СоздатьПроцесс("""C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\SQLCMD.EXE"" -S RTITS-1C-04 -v sourcedb=""" + БазаИсточник + """ db=""" + НазваниеБазы + """ bakfile=""D:\DBBACKUP\" + БазаИсточник + "_Copy.bak"" -i D:\Users\MAV\GIT\devops\sql\LoadBackupFileToDB.sql -o " + РабочийКаталог + "\Logs\sql.log"
+Журнал.Информация("Комманда: ""C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\SQLCMD.EXE"" -S tcp:RTITS-1C-" + ЦелевойСервер + " -v sourcedb=""" + БазаИсточник + """ db=""" + НазваниеБазы + """ bakfile=""\\RTITS-1C-04\DBBACKUP$\" + БазаИсточник + "_Copy.bak"" -i D:\Users\MAV\GIT\devops\sql\LoadBackupFileToDB.sql -o " + РабочийКаталог + "\Logs\sql.log");
+ПроцессSqlCMD = СоздатьПроцесс("""C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\SQLCMD.EXE"" -S tcp:RTITS-1C-" + ЦелевойСервер + " -v sourcedb=""" + БазаИсточник + """ db=""" + НазваниеБазы + """ bakfile=""\\RTITS-1C-04\DBBACKUP$\" + БазаИсточник + "_Copy.bak"" -i D:\Users\MAV\GIT\devops\sql\LoadBackupFileToDB.sql -o " + РабочийКаталог + "\Logs\sql.log"
 							,РабочийКаталог
 							,Истина
 							,Ложь
@@ -163,8 +185,9 @@
 ПроцессSqlCMD.ОжидатьЗавершения();
 
 Вывод  = СокрЛП(ПроцессSqlCMD.ПотокВывода.Прочитать());
+Ошибки = СокрЛП(ПроцессSqlCMD.ПотокОшибок.Прочитать());
 
-Журнал.Информация("Загрузка копии закончена. Вывод команды (" + Вывод + ")");
+Журнал.Информация("Загрузка копии закончена. Вывод команды (" + Вывод + Символы.ПС + Ошибки + ")");
 
 Если ПапкаХранилища.Существует() и 1=2 Тогда
 
