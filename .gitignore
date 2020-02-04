@@ -1,2 +1,4 @@
 *.log
 *.txt
+sql/loadsqlcopy.os
+deploy/doconfig.os
