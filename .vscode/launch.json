@@ -35,7 +35,7 @@
             "type": "oscript",
             "request": "launch",
             "program": "${file}",
-            "args": ["-repo", "D:\\Users\\MAV\\GIT\\ERP", "-branch", "master", "-srvname", "RTITS-CIS-01", "-ibname", "ERP_Production_Copy", "-usr", "\"defuser\"", "-pwd", "defuser", "-dpath", "D:\\Repository1C\\Deploy", "-fastupdate", "true", "-fromHash", "a0ccc00ef299cfd40b469b52fd717e891646e91c", "-toHash", "fd845c3ffb1f46ee9fde25781aed9eeb1c98745b", "-loadchanges", "true", "-loadextension", "true", "-updatecfgdump", "true", "-syntaxctrl", "false", "-updatedb", "true", "-deploycfg", "false", "-deployext", "false"],
+            "args": ["-repo", "D:\\Users\\AAZ\\git\\erp", "-branch", "master", "-srvname", "RTITS-1C-04", "-ibname", "TEST_AAZ", "-usr", "\"defuser\"", "-pwd", "defuser", "-dpath", "D:\\Users\\AAZ\\logs", "-fastupdate", "true", "-fromHash", "038780cbf7ed032a3f9c830fa8988e2d3af4e526", "-toHash", "d7788f895cea65cc49b3ecfdba15e2df1c5894e6", "-loadchanges", "true", "-loadextension", "true", "-updatecfgdump", "true", "-syntaxctrl", "false", "-updatedb", "true", "-deploycfg", "false", "-deployext", "false"],
             "cwd": "${workspaceRoot}",
             "runtimeExecutable": "C:\\Program Files (x86)\\OneScript\\bin\\oscript.exe",
             "runtimeArgs": []
