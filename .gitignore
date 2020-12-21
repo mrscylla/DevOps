@@ -1,2 +1,4 @@
 *.log
 *.txt
+.vscode/*
+Applications/ChangeLoader/.vscode/*
