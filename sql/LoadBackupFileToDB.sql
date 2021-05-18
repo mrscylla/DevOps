@@ -29,8 +29,8 @@ GO
 DBCC SHRINKFILE ('$(sourcedb)_log', 0);
 GO
 
-IF $(owner) <> ''
+IF '$(owner)' <> ''
 	BEGIN
 		ALTER AUTHORIZATION ON DATABASE::$(db) TO [$(owner)]
-		GO
-	END	
+	END
+GO
