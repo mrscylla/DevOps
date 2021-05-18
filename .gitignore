@@ -1,4 +1,6 @@
 *.log
 *.txt
 sql/db_info.json
+.vscode/*
+Applications/ChangeLoader/.vscode/*
 deploy/doconfig.os
