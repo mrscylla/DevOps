@@ -1,4 +1,6 @@
 *.log
 *.txt
+.vscode/*
+Applications/ChangeLoader/.vscode/*
 sql/loadsqlcopy.os
 deploy/doconfig.os
