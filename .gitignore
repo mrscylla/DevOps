@@ -1,4 +1,4 @@
 *.log
 *.txt
-sql/loadsqlcopy.os
+sql/db_info.json
 deploy/doconfig.os

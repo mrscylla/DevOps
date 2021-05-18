@@ -26,9 +26,9 @@
             "program": "${file}",
             "args": [],
             "cwd": "${workspaceRoot}",
-            "runtimeExecutable": "C:\\Program Files (x86)\\OneScript\\bin\\oscript.exe",
+            "runtimeExecutable": "C:\\Program Files\\OneScript\\bin\\oscript.exe",
             "debugPort": 2801,
-            "protocol": "internal"
+            "protocol": "tcp"
         },
         {
             "name": "Отладка loadchanges.os ",
