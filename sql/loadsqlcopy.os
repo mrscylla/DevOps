@@ -144,7 +144,7 @@
 Если СтрНайти(НазваниеБазы, "0")>0 Тогда
 	ЦелевойСервер = Сред(НазваниеБазы, СтрНайти(НазваниеБазы, "0"));
 Иначе
-	ЦелевойСервер = "04";
+	ЦелевойСервер = "01";
 КонецЕсли;
 
 НазваниеБазы = Сред(НазваниеБазы, 1, СтрНайти(НазваниеБазы, "0") - 1);
@@ -175,8 +175,8 @@
 
 Журнал.Информация("запуск загрузки копии из SQL для " + БазаИсточник + " в " + НазваниеБазы);
 
-Журнал.Информация("Комманда: ""C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\SQLCMD.EXE"" -S tcp:RTITS-1C-" + ЦелевойСервер + " -v sourcedb=""" + БазаИсточник + """ db=""" + НазваниеБазы + """ bakfile=""\\RTITS-1C-04\DBBACKUP$\" + БазаИсточник + "_Copy.bak"" -i D:\Users\MAV\GIT\devops\sql\LoadBackupFileToDB.sql -o " + РабочийКаталог + "\Logs\sql.log");
-ПроцессSqlCMD = СоздатьПроцесс("""C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\SQLCMD.EXE"" -S tcp:RTITS-1C-" + ЦелевойСервер + " -v sourcedb=""" + БазаИсточник + """ db=""" + НазваниеБазы + """ bakfile=""\\RTITS-1C-04\DBBACKUP$\" + БазаИсточник + "_Copy.bak"" -i D:\Users\MAV\GIT\devops\sql\LoadBackupFileToDB.sql -o " + РабочийКаталог + "\Logs\sql.log"
+Журнал.Информация("Комманда: ""C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\SQLCMD.EXE"" -S tcp:RTITS-CIS-" + ЦелевойСервер + " -v sourcedb=""" + БазаИсточник + """ db=""" + НазваниеБазы + """ bakfile=""\\RTITS-1C-04\DBBACKUP$\" + БазаИсточник + "_Copy.bak"" -i D:\Users\MAV\GIT\devops\sql\LoadBackupFileToDB.sql -o " + РабочийКаталог + "\Logs\sql.log");
+ПроцессSqlCMD = СоздатьПроцесс("""C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\SQLCMD.EXE"" -S tcp:RTITS-CIS-" + ЦелевойСервер + " -v sourcedb=""" + БазаИсточник + """ db=""" + НазваниеБазы + """ bakfile=""\\RTITS-1C-04\DBBACKUP$\" + БазаИсточник + "_Copy.bak"" -i D:\Users\MAV\GIT\devops\sql\LoadBackupFileToDB.sql -o " + РабочийКаталог + "\Logs\sql.log"
 							,РабочийКаталог
 							,Истина
 							,Ложь
