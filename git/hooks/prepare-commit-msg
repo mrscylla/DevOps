@@ -19,7 +19,7 @@ else
 		then
 			read -r FIRSTLINE < "$COMMIT_MSG_FILE"
 			
-			if [ "$FIRSTLINE" != "$ISSUE" ]
+			if [[ ! "$FIRSTLINE" =~ $ISSUE ]]
 			then
 				echo -e "$ISSUE:" "$(cat "$1")" > "$1"
 			fi
