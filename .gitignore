@@ -2,4 +2,4 @@
 *.txt
 sql/db_info.json
 .vscode/*
-deploy/doconfig.os
+.settings/*
