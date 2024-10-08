@@ -4,6 +4,7 @@ import argparse
 from xmldiff import main, actions
 import pygit2
 import subprocess
+import sys
 
 def ФайлВСпискеНеИзменяемых(ИмяФайла):
 	return (ИмяФайла == "Rights.xml" or 
@@ -27,6 +28,8 @@ parser.add_argument('-r', help='remote commit', type=str)
 parser.add_argument('-b', help='base commit', type=str)
 
 args = parser.parse_args()
+
+
 
 localCommit = args.l.split(":")[0]
 remoteCommit = args.r.split(":")[0]
@@ -65,12 +68,14 @@ print("\n\n--------------------------------\n"
 
 repo = pygit2.Repository(scriptFolder)
 currentBranchName = repo.head.shorthand
-# Их комит не из ориджина 1С?
-rCommit = repo.revparse_single(remoteCommit)
 
-origin1c = repo.branches.local.with_commit(rCommit).get('origin1c')
-#print("Текущая ветка: " + currentBranchName + "\n" +
-#      "Их ветка: " + origin1c.branch_name)
+origin1c = None
+if (remoteCommit.find("Temporary merge branch") == -1):
+    # Их комит не из ориджина 1С?
+    rCommit = repo.revparse_single(remoteCommit)
+    origin1c = repo.branches.local.with_commit(rCommit).get('origin1c')
+    #print("Текущая ветка: " + currentBranchName + "\n" +
+    #      "Их ветка: " + origin1c.branch_name)
 
 onlyVersionChanged = False
 print("Проверяем в списке неизменяемых: " + os.path.basename(originalFile))
@@ -96,7 +101,7 @@ if (fileInUnchangeableList or onlyVersionChanged):
     if (currentBranchName == 'origin1c'):
         print("Выбираю ""наш"" файл: " + resultFile + "(оставляем " + localFile + ")")
         exit(0)
-    if (origin1c != None and origin1c.branch_name == 'origin1c'):
+    if ((origin1c != None and origin1c.branch_name == 'origin1c') or "РТ_" in resultFile or "html" in resultFile):
         print("Выбираю ""их"" файл! Копирую " + remoteFile + " в " + localFile + "(" + resultFile + ")")
         shutil.copyfile(remoteFile, localFile)
         exit(0)     
